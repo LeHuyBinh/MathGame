@@ -29,7 +29,7 @@ public class AnswersSpawner : MonoBehaviour
             ans.isTrue = false;
         }
 
-        var index = GameMaster.instance.GenRndNum(0f, 2.0f);
+        var index = GameMaster.instance.GenRndNum(0f, 2f);
         listAns[index].SetText(result);
         listAns[index].isTrue = true;
     }

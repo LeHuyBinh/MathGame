@@ -25,6 +25,8 @@ public class GameMaster : MonoBehaviour
     private int index = 0;
     public int topIndex = 0;
 
+    [SerializeField] private float speed;
+
     private void Awake()
     {
         instance = this;
@@ -75,6 +77,11 @@ public class GameMaster : MonoBehaviour
         {
             //Time.timeScale = 0;
             gameOver.GameOverPopup(totalScore);
+            foreach (var item in spawner.listEq)
+            {
+                item.isCheck = true;
+            }
+            return;
         }
     }
 
@@ -88,7 +95,7 @@ public class GameMaster : MonoBehaviour
         int temp = (int)Mathf.Round(UnityEngine.Random.Range(from, to));
         if (temp == except)
         {
-            return temp + 1;
+            return temp + 2;
         }
         return temp;
     }
@@ -106,8 +113,9 @@ public class GameMaster : MonoBehaviour
 
     IEnumerator pausegame()
     {
+        speed = Time.timeScale;
         Time.timeScale = 0.001f;
         yield return new WaitForSeconds(0.005f);
-        Time.timeScale = 1;
+        Time.timeScale = speed;
     }
 }

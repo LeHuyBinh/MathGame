@@ -44,7 +44,7 @@ public class Quest : MonoBehaviour
                 Debug.LogWarning("here");
                 gameMaster.life.loseHeart();
                 gameMaster.topIndex++;
-                Debug.LogError(gameMaster.spawner.listEq[gameMaster.topIndex].result + " + " + gameMaster.topIndex);
+                //Debug.LogError(gameMaster.spawner.listEq[gameMaster.topIndex].result + " + " + gameMaster.topIndex);
                 gameMaster.ansSpawner.setNewAnswer(gameMaster.spawner.listEq[gameMaster.topIndex].result);
             }
             transform.Translate(Vector3.up * startPos);
