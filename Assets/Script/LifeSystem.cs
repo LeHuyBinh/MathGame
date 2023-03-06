@@ -25,7 +25,7 @@ public class LifeSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void loseHeart()
+    public void LoseHeart()
     {
         Debug.LogError("LoseHeart");
         listHeart[heartIndex].gameObject.SetActive(false);

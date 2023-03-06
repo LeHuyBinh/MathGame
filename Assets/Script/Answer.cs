@@ -34,7 +34,7 @@ public class Answer : MonoBehaviour
             {
                 gameMaster.topIndex = 0;
             }
-            gameMaster.ansSpawner.setNewAnswer(gameMaster.spawner.listEq[gameMaster.topIndex].result);
+            gameMaster.ansSpawner.SetNewAnswer(gameMaster.spawner.listEq[gameMaster.topIndex].result);
             topQuest.isCheck = true;
             score = gameMaster.totalScore + 1;
 
@@ -53,9 +53,9 @@ public class Answer : MonoBehaviour
             {
                 gameMaster.topIndex = 0;
             }
-            gameMaster.ansSpawner.setNewAnswer(gameMaster.spawner.listEq[gameMaster.topIndex].result);
+            gameMaster.ansSpawner.SetNewAnswer(gameMaster.spawner.listEq[gameMaster.topIndex].result);
             topQuest.isCheck = true;
-            gameMaster.life.loseHeart();
+            gameMaster.life.LoseHeart();
         }
     }
 

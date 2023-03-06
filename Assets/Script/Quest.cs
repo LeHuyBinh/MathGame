@@ -42,10 +42,10 @@ public class Quest : MonoBehaviour
             if (!this.isCheck)
             {
                 Debug.LogWarning("here");
-                gameMaster.life.loseHeart();
+                gameMaster.life.LoseHeart();
                 gameMaster.topIndex++;
                 //Debug.LogError(gameMaster.spawner.listEq[gameMaster.topIndex].result + " + " + gameMaster.topIndex);
-                gameMaster.ansSpawner.setNewAnswer(gameMaster.spawner.listEq[gameMaster.topIndex].result);
+                gameMaster.ansSpawner.SetNewAnswer(gameMaster.spawner.listEq[gameMaster.topIndex].result);
             }
             transform.Translate(Vector3.up * startPos);
             transform.gameObject.SetActive(false);
@@ -53,7 +53,7 @@ public class Quest : MonoBehaviour
             //isOnTop = false;
             GenEquation();
             this.isCheck = false;
-
+                                    
             //gameMaster.spawner.ansSpawner.SpawnAnswer(result);
         }
     }
@@ -93,11 +93,6 @@ public class Quest : MonoBehaviour
             //Debug.LogError("Substraction Result: " + result);
         }
         //Debug.LogError("EQ: " + tempEq + "   " + result);
-        return result;
-    }
-
-    public int getResult()
-    {
         return result;
     }
 

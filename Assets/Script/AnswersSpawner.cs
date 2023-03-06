@@ -18,9 +18,9 @@ public class AnswersSpawner : MonoBehaviour
             listAns.Add(answer);
             answer.gameObject.transform.parent = tr;
         }
-        setNewAnswer(result);
+        SetNewAnswer(result);
     }
-    public void setNewAnswer(int result)
+    public void SetNewAnswer(int result)
     {
 
         foreach (Answer ans in listAns)

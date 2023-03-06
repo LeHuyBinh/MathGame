@@ -108,10 +108,10 @@ public class GameMaster : MonoBehaviour
 
     private void Freeze()
     {
-        StartCoroutine(pausegame());
+        StartCoroutine(Pausegame());
     }
 
-    IEnumerator pausegame()
+    IEnumerator Pausegame()
     {
         speed = Time.timeScale;
         Time.timeScale = 0.001f;
